@@ -28,7 +28,11 @@ graph TD
     *   **LLM:** Simulating rewrite logic to demonstrate the *architecture* reliability without token costs.
     *   **Impact:** The system flow is 100% real; only the external data providers are mocked.
 
-2.  **SQLite Database:**
+2.  **HTML Rendering (Security):**
+    *   **Decision:** Used `dangerouslySetInnerHTML` in React to properly display the "AI Rewritten" HTML content.
+    *   **Trade-off:** In a production app, this requires strict sanitization (e.g., `DOMPurify`) to prevent XSS. For this assignment, we prioritize correctly measuring the LLM's HTML output.
+
+3.  **SQLite Database:**
     *   **Decision:** Used SQLite instead of MySQL to ensure zero-config runnability for the reviewer.
     *   **Impact:** Lower concurrency support but perfectly adequate for this assignment scale.
 

@@ -75,13 +75,23 @@ async function main() {
 
         if (MOCK_LLM_API) {
             newContent = `
-            [AI REWRITTEN CONTENT]
+            <h2>The Evolution of Frameworks</h2>
+            <p>Based on recent analysis from <strong>${searchResults.length} sources</strong>, the landscape of web development is shifting.</p>
             
-            Based on recent analysis from ${searchResults.length} sources, here is the updated perspective on "${article.title}".
+            <h3>Key Takeaways</h3>
+            <ul>
+                <li><strong>Performance:</strong> New compilation techniques are reducing bundle sizes.</li>
+                <li><strong>DX:</strong> Developer experience is prioritizing server-side rendering.</li>
+            </ul>
+
+            <h3>Deep Dive</h3>
+            <p>${researchedContent.replace(/\n/g, " ").substring(0, 300)}...</p>
             
-            ${researchedContent.replace(/\n/g, " ").substring(0, 200)}...
-            
-            (This is a simulated LLM response demonstrating the architecture.)
+            <blockquote>
+                "The future of coding is vibe-based." - AI Analysis
+            </blockquote>
+
+            <p><em>(This is a simulated LLM response demonstrating the architecture.)</em></p>
             `;
             console.log('   (Mock LLM response generated)');
         }
