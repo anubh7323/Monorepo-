@@ -65,14 +65,19 @@ function ArticleDetail() {
             {/* Content */}
             <div className="max-w-3xl mx-auto px-8 py-12">
                 <article className="prose prose-invert prose-lg max-w-none">
-                    <div className="whitespace-pre-wrap">{article.content}</div>
+                    <div
+                        className="article-content"
+                        dangerouslySetInnerHTML={{ __html: article.content }}
+                    />
                 </article>
             </div>
 
             {/* References */}
             {article.references && article.references.length > 0 && (
                 <div className="max-w-3xl mx-auto px-8 py-8 border-t border-gray-800">
-                    <h3 className="text-xl font-bold mb-4 text-gray-300">AI References</h3>
+                    <h3 className="text-2xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                        AI Sources & References
+                    </h3>
                     <ul className="list-disc pl-5 space-y-2 text-gray-400">
                         {article.references.map((ref, idx) => (
                             <li key={idx}>
