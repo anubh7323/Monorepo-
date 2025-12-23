@@ -89,8 +89,9 @@ node index.js
 
 ## 🌐 Live Demo
 
-Due to limited time and to prioritize system design and correctness, the application is not deployed.
-The entire project is fully runnable locally using the instructions above.
+You can view the live frontend here: **[https://monorepo-two-rho.vercel.app/](https://monorepo-two-rho.vercel.app/)**
+
+> Note: The frontend is deployed on Vercel. Since the backend is running locally, the live demo may show empty data or mock data depending on API connectivity. For the full experience, run the backend locally.
 
 ---
 
